@@ -3,32 +3,31 @@
   <section>
       
       <Header></Header>
-      <ListChar :offsetpage= "page"></ListChar>
-      <Footer @pageChange></Footer>
       
-
-     
+   <character :ofsetpage= "$route.params.page"> </character>
+           
   </section>
 </template>
 
 <script>
 import Header from "./Header.vue";
-import ListChar from "./character.vue";
-import Footer from "./Footer.vue";
+import character from "./character.vue";
+
 
 
 export default {
   name: "Accueil",
   components: {
     Header,
-    ListChar,
-    Footer
+    character,
+   
    
   },
 
-  data: function() {
+  data() {
     return {
-     page:100
+      page:1,
+     heroes: []
     }
   },
   beforeCreate() {
@@ -37,7 +36,7 @@ export default {
     
   },
   methods: {
-    
+  
   }
 }
 </script>

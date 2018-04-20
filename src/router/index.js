@@ -5,9 +5,10 @@ import Accueil from '@/components/Accueil'
 Vue.use(Router)
 
 export default new Router({
+  
   routes: [
     {
-      path: '/',
+      path: '/:page',
       name: 'Accueil',
       component: Accueil
     }

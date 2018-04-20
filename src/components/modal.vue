@@ -15,7 +15,7 @@
             </div>
         </b-modal><a href="#">
         <h3  @click="modalShow = !modalShow" >{{hero.name}}</h3> </a>
-        
+        <i @click="favoriteChar(hero.name)" class="fas fa-star"></i>
     </div>
   
 </template>
@@ -35,6 +35,9 @@ export default {
         }
     },
     methods:{
+         favoriteChar(name) {
+            this.$emit('favoriteChar',name)
+        }
        
        
         
